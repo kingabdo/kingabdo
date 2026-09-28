@@ -1,0 +1,350 @@
+<title>دار الفناء — طنجة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=Noto+Naskh+Arabic:wght@400;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap">
+<style>
+:root{
+  --ground:#f4f3ee;
+  --paper:#fbfaf6;
+  --sheet:#ffffff;
+  --ink:#24231f;
+  --ink-2:#56524a;
+  --rule:#d9d4c8;
+  --sand:#c7a468;
+  --sand-soft:#efe4cc;
+  --wood:#7b4f2e;
+  --wood-ink:#6a4225;
+  --note:#f3ead8;
+  --focus:#7b4f2e;
+  --display:"Reem Kufi","IBM Plex Sans Arabic",Tahoma,sans-serif;
+  --body:"Noto Naskh Arabic","Amiri",Tahoma,serif;
+  --ui:"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#1b1a17;--paper:#22211d;--sheet:#f4f2ec;
+    --ink:#ece8df;--ink-2:#b5ae9f;--rule:#3a3730;
+    --sand:#d4b47a;--sand-soft:#3a3223;--wood:#d49a6a;--wood-ink:#e3ad80;--note:#2c2820;--focus:#d49a6a;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#1b1a17;--paper:#22211d;--sheet:#f4f2ec;
+  --ink:#ece8df;--ink-2:#b5ae9f;--rule:#3a3730;
+  --sand:#d4b47a;--sand-soft:#3a3223;--wood:#d49a6a;--wood-ink:#e3ad80;--note:#2c2820;--focus:#d49a6a;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.85;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1000px;margin-inline:auto}
+a{color:var(--wood-ink)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:2px}
+
+/* title block, drawn like an architect's sheet cartouche */
+.cartouche{margin-top:28px;display:grid;grid-template-columns:1fr auto;border:1.5px solid var(--ink);background:var(--paper)}
+.cartouche .name{padding:22px 24px;border-inline-end:1.5px solid var(--ink)}
+.cartouche h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,54px);line-height:1.15;margin:0;text-wrap:balance}
+.cartouche .lede{margin:10px 0 0;color:var(--ink-2);max-width:60ch}
+.cartouche dl{margin:0;display:grid;grid-template-columns:auto auto;font-family:var(--ui);font-size:13.5px;min-width:260px}
+.cartouche dt,.cartouche dd{margin:0;padding:7px 14px;border-bottom:1px solid var(--rule)}
+.cartouche dt{color:var(--ink-2);letter-spacing:.02em}
+.cartouche dd{font-weight:600;font-variant-numeric:tabular-nums}
+.cartouche dl>*:nth-last-child(-n+2){border-bottom:0}
+.stamp{display:inline-block;border:1.5px solid var(--wood);color:var(--wood-ink);padding:0 8px;font-weight:600}
+@media (max-width:720px){
+  .cartouche{grid-template-columns:1fr}
+  .cartouche .name{border-inline-end:0;border-bottom:1.5px solid var(--ink)}
+  .cartouche dl{min-width:0}
+}
+
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ground);border-bottom:1px solid var(--rule);margin-top:18px}
+nav.toc ol{list-style:none;margin:0;padding:10px 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--ui);font-size:14px}
+nav.toc a{text-decoration:none;color:var(--ink-2)}
+nav.toc a:hover{color:var(--wood-ink)}
+nav.toc span{font-variant-numeric:tabular-nums;color:var(--sand);margin-inline-end:4px}
+
+section{margin-top:56px;scroll-margin-top:60px}
+h2{font-family:var(--display);font-weight:700;font-size:30px;line-height:1.3;margin:0 0 6px;display:flex;gap:14px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--ui);font-size:15px;color:var(--wood-ink);border:1.5px solid currentColor;padding:0 8px;font-weight:600}
+h3{font-family:var(--ui);font-weight:600;font-size:19px;margin:32px 0 8px}
+p,li{max-width:68ch}
+ul,ol{padding-inline-start:1.3em}
+li{margin-block:4px}
+strong{font-weight:700}
+
+.band{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:20px}
+.band>div{background:var(--paper);padding:16px 18px}
+.band b{display:block;font-family:var(--ui);font-size:13px;color:var(--wood-ink);letter-spacing:.03em;font-weight:600}
+.band p{margin:4px 0 0;font-size:15.5px;line-height:1.75}
+@media (max-width:720px){.band{grid-template-columns:1fr}}
+
+.figs{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+figure{margin:0;background:var(--sheet);border:1px solid var(--rule);padding:8px}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-family:var(--ui);font-size:13px;color:#56524a;padding:6px 6px 2px}
+.elev{max-width:720px;margin-inline:auto;margin-top:18px}
+@media (max-width:720px){.figs{grid-template-columns:1fr}}
+
+.tbl{overflow-x:auto;margin-top:12px;border:1px solid var(--rule);background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-family:var(--ui);font-size:14.5px;line-height:1.6}
+th,td{text-align:start;padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-weight:600;color:var(--ink-2);font-size:13px;background:var(--sand-soft)}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.sum td{font-weight:600;border-top:1.5px solid var(--ink)}
+tr.open td{color:var(--ink-2)}
+tr:last-child td{border-bottom:0}
+
+.note{background:var(--note);border-inline-start:3px solid var(--sand);padding:12px 16px;margin-top:16px;max-width:none}
+.note p{margin:0}
+
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.sw{background:var(--paper);border:1px solid var(--rule)}
+.sw .chip{height:74px;border-bottom:1px solid var(--rule)}
+.sw .t{padding:10px 12px}
+.sw b{font-family:var(--ui);font-size:15px;display:block}
+.sw p{margin:4px 0 0;font-size:14px;line-height:1.65;color:var(--ink-2)}
+.chip.lime{background:#f6f5f0}
+.chip.stone{background:linear-gradient(180deg,#d8c39a,#c8ad7c)}
+.chip.wood{background:repeating-linear-gradient(0deg,#9a6a43 0 9px,#8a5c38 9px 11px)}
+.chip.bejmat{background:#b86b4b;background-image:linear-gradient(90deg,rgba(255,255,255,.35) 1px,transparent 1px),linear-gradient(0deg,rgba(255,255,255,.35) 1px,transparent 1px);background-size:34px 17px}
+@media (max-width:720px){.swatches{grid-template-columns:1fr 1fr}}
+
+.prompt{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.7;direction:ltr;text-align:left;background:var(--paper);border:1px solid var(--rule);padding:14px 16px;white-space:pre-wrap;margin:0}
+.copyrow{display:flex;justify-content:flex-start;margin-top:8px}
+button{font-family:var(--ui);font-size:14px;background:transparent;color:var(--wood-ink);border:1.5px solid var(--wood);padding:4px 14px;cursor:pointer}
+button:hover{background:var(--sand-soft)}
+.shots{counter-reset:s;list-style:none;padding:0;display:grid;gap:12px}
+.shots li{max-width:none;background:var(--paper);border:1px solid var(--rule);padding:12px 16px 12px 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.shots li::before{counter-increment:s;content:counter(s);font-family:var(--ui);font-weight:600;color:var(--wood-ink);grid-row:span 2}
+.shots b{font-family:var(--ui)}
+.shots p{margin:0;font-size:15.5px;max-width:none}
+
+.checks{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.checks li{max-width:none;display:grid;grid-template-columns:18px 1fr;gap:10px;background:var(--paper);border:1px solid var(--rule);padding:10px 14px;font-size:15.5px;line-height:1.7}
+.checks li::before{content:"";width:14px;height:14px;border:1.5px solid var(--ink-2);margin-top:6px}
+@media (max-width:720px){.checks{grid-template-columns:1fr}}
+
+footer{margin-top:64px;border-top:1.5px solid var(--ink);padding-top:12px;font-family:var(--ui);font-size:13px;color:var(--ink-2)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap" dir="rtl" lang="ar">
+
+<header class="cartouche">
+  <div class="name">
+    <h1>دار الفناء</h1>
+    <p class="lede">منزل عائلي متوسطي معاصر على قطعة ملاصقة في طنجة. ضوء الجنوب للغرف الأمامية، وفناء خلفي صغير يمنح الغرف الخلفية واجهة ثانية.</p>
+  </div>
+  <dl>
+    <dt>الموقع</dt><dd>طنجة، نسيج مبني</dd>
+    <dt>القطعة</dt><dd>10 × 10 م = 100 م²</dd>
+    <dt>الواجهة</dt><dd>واحدة، جنوب</dd>
+    <dt>الطوابق</dt><dd>أرضي + أول</dd>
+    <dt>المبني الإجمالي</dt><dd>≈ 162 م²</dd>
+    <dt>الحالة</dt><dd><span class="stamp">تصوّري</span></dd>
+  </dl>
+</header>
+
+<nav class="toc" aria-label="أقسام الوثيقة">
+  <ol>
+    <li><a href="#idea"><span>1</span>الفكرة</a></li>
+    <li><a href="#assumptions"><span>2</span>الافتراضات والتعارضات</a></li>
+    <li><a href="#floors"><span>3</span>الطوابق والمساحات</a></li>
+    <li><a href="#strategy"><span>4</span>الحركة والضوء والشبكات</a></li>
+    <li><a href="#facade"><span>5</span>الواجهة والمواد</a></li>
+    <li><a href="#visuals"><span>6</span>اللقطات</a></li>
+    <li><a href="#site"><span>7</span>التحقق الميداني</a></li>
+  </ol>
+</nav>
+
+<section id="idea">
+  <h2><span class="n">1</span>ملخص الفكرة</h2>
+  <p>القطعة محاطة بالجيران من ثلاث جهات، ولها واجهة واحدة على الجنوب. لذلك قُسّم البيت إلى شريط أمامي يأخذ ضوء الشارع، وفناء مكشوف خلف المرآب يعطي البيت واجهة داخلية ثانية. هذا الجزء من القطعة يصعب استعماله لغير ذلك، لأن المرآب يستهلك 5.5 م من العمق.</p>
+  <div class="band">
+    <div><b>الغرب — يسار الواجهة</b><p>المرآب في الأمام، والفناء خلفه (3.20 × 3.90 م) مفتوح للسماء على كامل الارتفاع.</p></div>
+    <div><b>الوسط</b><p>المدخل والممر والحمامان والغسيل، على عمود صحي واحد يتكرر في الطابقين.</p></div>
+    <div><b>الشرق — يمين الواجهة</b><p>غرفة الوالدة في الأمام، ثم الدرج، ثم معيشة العائلة المطلة على الفناء.</p></div>
+  </div>
+  <p>في الطابق الأول: صالون الضيوف فوق المرآب على الشارع، والمكتب وغرفة الأطفال على الواجهة، وغرفة الأبوين في الخلف مطلّة على الفناء ومعها شرفة خاصة مكشوفة. الهواء يعبر من نوافذ الشارع ويخرج عبر الفناء.</p>
+</section>
+
+<section id="assumptions">
+  <h2><span class="n">2</span>الافتراضات والتعارضات</h2>
+  <h3>افتراضات تحتاج تحقّقًا</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>الموضوع</th><th>الافتراض المعتمد</th></tr></thead>
+    <tbody>
+      <tr><td>الارتدادات والتغطية</td><td>لم تُفترض ارتدادات قانونية. البناء ملاصق للجيران الثلاثة وعلى حد الشارع. الفناء خيار تصميمي للضوء، ولم يُفترض أنه إلزامي.</td></tr>
+      <tr><td>الجدران</td><td>جدران ملاصقة خاصة بالمشروع 0.20 م، وواجهة 0.25 م، وقواطع 0.10 إلى 0.15 م.</td></tr>
+      <tr><td>الارتفاعات</td><td>3.00 م من أرضية إلى أرضية، وسترة السطح عند +7.10. مناسيب افتراضية لم تُستخرج من أي تنظيم.</td></tr>
+      <tr><td>منسوب الأرض</td><td>القطعة في مستوى الشارع. أي ميل في الشارع يغيّر مدخل المرآب والعتبة.</td></tr>
+      <tr><td>الشمس</td><td>الواجهة جنوبية: شمس منخفضة عليها شتاءً ومرتفعة صيفًا. لم تُفترض زوايا دقيقة.</td></tr>
+      <tr><td>السيارة</td><td>طولها 4.6 م أو أقل، وعرضها نحو 1.8 م.</td></tr>
+      <tr><td>الأسرة</td><td>الوالدة، والأبوان، وطفلان يتقاسمان غرفة واحدة.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>تعارضات في الطلب وكيف حُسمت</h3>
+  <ol>
+    <li><strong>عدد الطوابق.</strong> البيانات تحدد أرضي + أول، والطلبات الخاصة تذكر طابقًا ثانيًا لغرف الأطفال. اعتمدنا طابقين، فالطابق الأول هو الأخير وفيه المكتب. البديل (ب) بطابق ثانٍ موصوف في القسم 3.</li>
+    <li><strong>غرف الأطفال.</strong> البرنامج 3 غرف نوم: الوالدة، والأبوان، وغرفة أطفال مشتركة بسريرين. غرفتان مستقلتان تتطلبان حذف الشرفة أو تصغير الفناء، ولا نوصي بذلك.</li>
+    <li><strong>الصالونات.</strong> صالون مغربي واحد 17.6 م². الصالون الثاني موجود في البديل (ب).</li>
+    <li><strong>حمامان فقط.</strong> حمام في كل طابق، الثاني فوق الأول. حمام الطابق الأول بابه على البهو، فيستعمله الضيوف دون دخول غرفة خاصة. أول إضافة نوصي بها إن سمحت الميزانية: مرحاض ضيوف صغير.</li>
+    <li><strong>الضيوف في الطابق الأول.</strong> الدرج يبدأ من المدخل مباشرة، فلا يمر الضيف بمعيشة العائلة ولا بغرفة الوالدة.</li>
+    <li><strong>غرفة الغسيل.</strong> صارت مدمجة (1.60 × 1.15 م) تكفي لغسالة ومجففة فوق بعضهما ومغسلة صغيرة. النشر في الفناء أو على السطح.</li>
+  </ol>
+  <div class="note"><p><strong>ترتيب الأولويات عند التعارض:</strong> ضوء الفناء وتهويته، ثم غرفة الوالدة بلا درجات، ثم المرآب، ثم فصل مسار الضيوف، ثم حجم غرفة الغسيل، ثم عدد الصالونات.</p></div>
+</section>
+
+<section id="floors">
+  <h2><span class="n">3</span>توزيع الطوابق وجداول المساحات</h2>
+  <p>المخططات تصوّرية، مرسومة من إحداثيات بالمتر، وليست ملف CAD أو BIM. المساحات صافية داخلية بين وجوه الجدران الخام، والجدران محسوبة في كل جدول حتى يطابق المجموع مساحة الأرض.</p>
+  <div class="figs">
+    <figure>{{GF}}<figcaption>الطابق الأرضي. الشارع في الأسفل (جنوب).</figcaption></figure>
+    <figure>{{FF}}<figcaption>الطابق الأول. الفناء والشرفة مكشوفان.</figcaption></figure>
+  </div>
+
+  <h3>الطابق الأرضي — مبني إجمالي ≈ 87.5 م²</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>الفراغ</th><th>الأبعاد (م)</th><th>م²</th><th>الموقع</th><th>العلاقة بما يجاوره</th></tr></thead>
+    <tbody>
+      <tr><td>مرآب سيارة</td><td class="num">3.20 × 5.50</td><td class="num">17.6</td><td>أمامي غربي</td><td>باب قلّاب أو مقسّم عرضه 2.70، وباب داخلي إلى المدخل</td></tr>
+      <tr><td>مدخل</td><td class="num">2.90 × 1.75</td><td class="num">5.1</td><td>أمامي وسط</td><td>الباب مزاح غربًا ويواجه جدار الحمام، فلا يُرى عمق البيت</td></tr>
+      <tr><td>ممر وبداية الدرج</td><td class="num">1.20 × 3.80</td><td class="num">4.6</td><td>وسط</td><td>يوزّع إلى الوالدة والحمام والدرج والمعيشة</td></tr>
+      <tr><td>غرفة الوالدة</td><td class="num">3.25 × 3.35</td><td class="num">10.9</td><td>أمامي شرقي</td><td>نافذة جنوبية بستارة خشبية، وبابها يقابل باب الحمام على بعد 1.20 م</td></tr>
+      <tr><td>حمام 1</td><td class="num">1.60 × 2.45</td><td class="num">3.9</td><td>وسط</td><td>دُش بلا عتبة، وباب منزلق، وتهوية بقناة إلى السطح</td></tr>
+      <tr><td>غسيل</td><td class="num">1.60 × 1.15</td><td class="num">1.8</td><td>وسط شمالي</td><td>بابه من المطبخ، على العمود الصحي نفسه</td></tr>
+      <tr><td>درج U</td><td class="num">3.25 × 2.10</td><td class="num">6.8</td><td>وسط شرقي</td><td>قلبتان عرض كل منهما 1.00، في كل قلبة 9 قوائم. تخزين تحت القلبة العليا</td></tr>
+      <tr><td>مطبخ + طعام</td><td class="num">2.90 × 3.90</td><td class="num">11.3</td><td>خلفي وسط</td><td>مطبخ على شكل L، والمغسلة تحت نافذة الفناء، وطاولة لـ4 إلى 6</td></tr>
+      <tr><td>معيشة العائلة</td><td class="num">3.25 × 3.90</td><td class="num">12.7</td><td>خلفي شرقي</td><td>فراغ واحد مع المطبخ مساحته 24.4 م²</td></tr>
+      <tr class="sum"><td>المسقوف الصافي</td><td></td><td class="num">75.1</td><td></td><td></td></tr>
+      <tr class="open"><td>الفناء (مكشوف)</td><td class="num">3.20 × 3.90</td><td class="num">12.5</td><td>خلفي غربي</td><td>باب زجاجي 1.60 ونافذة للمطبخ</td></tr>
+      <tr class="open"><td>جدران وأعمدة وقنوات</td><td></td><td class="num">12.4</td><td></td><td>نحو 12% من القطعة</td></tr>
+      <tr class="sum"><td>المجموع</td><td></td><td class="num">100.0</td><td></td><td>يطابق مساحة الأرض</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>الطابق الأول — مبني إجمالي ≈ 75 م²</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>الفراغ</th><th>الأبعاد (م)</th><th>م²</th><th>الموقع</th><th>العلاقة بما يجاوره</th></tr></thead>
+    <tbody>
+      <tr><td>صالون الضيوف</td><td class="num">3.20 × 5.50</td><td class="num">17.6</td><td>فوق المرآب</td><td>نافذة جنوبية، ونافذة عالية على الفناء للتهوية دون إطلالة. بابه من البهو</td></tr>
+      <tr><td>مكتب</td><td class="num">2.90 × 1.75</td><td class="num">5.1</td><td>فوق المدخل</td><td>نافذته على محور باب الدخول</td></tr>
+      <tr><td>ممر</td><td class="num">1.20 × 2.55</td><td class="num">3.1</td><td>وسط</td><td>يخدم المكتب وغرفة الأطفال، ومنه القلبة نحو السطح</td></tr>
+      <tr><td>بهو الوصول</td><td class="num">2.90 × 1.15</td><td class="num">3.3</td><td>وسط</td><td>يوزّع إلى الصالون والحمام والأبوين والدرج</td></tr>
+      <tr><td>حمام 2</td><td class="num">1.60 × 2.45</td><td class="num">3.9</td><td>وسط</td><td>فوق حمام 1، وبابه على البهو للضيوف والعائلة</td></tr>
+      <tr><td>غرفة الأطفال</td><td class="num">3.25 × 3.35</td><td class="num">10.9</td><td>أمامي شرقي</td><td>نافذة جنوبية فوق نافذة الوالدة، وسريران على شكل L</td></tr>
+      <tr><td>درج U</td><td class="num">3.25 × 2.10</td><td class="num">6.8</td><td>وسط شرقي</td><td>يتابع نحو السطح</td></tr>
+      <tr><td>غرفة الأبوين</td><td class="num">2.90 × 3.90</td><td class="num">11.3</td><td>خلفي وسط</td><td>نافذة-باب على الفناء بدرابزين، وباب إلى الشرفة</td></tr>
+      <tr class="sum"><td>المسقوف الصافي</td><td></td><td class="num">62.0</td><td></td><td></td></tr>
+      <tr class="open"><td>شرفة الأبوين (مكشوفة)</td><td class="num">3.25 × 3.90</td><td class="num">12.7</td><td>فوق المعيشة</td><td>جدران حماية بارتفاع 1.80 م تقريبًا نحو الجارين، وعريشة خشبية</td></tr>
+      <tr class="open"><td>فراغ الفناء</td><td class="num">3.20 × 3.90</td><td class="num">12.5</td><td>خلفي غربي</td><td>مفتوح للسماء</td></tr>
+      <tr class="open"><td>جدران ومتفرقات</td><td></td><td class="num">12.8</td><td></td><td></td></tr>
+      <tr class="sum"><td>المجموع</td><td></td><td class="num">100.0</td><td></td><td></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>خلاصة المساحات</h3>
+  <div class="tbl"><table>
+    <tbody>
+      <tr><td>مساحة الأرض</td><td class="num">100 م²</td></tr>
+      <tr><td>المبني الإجمالي: الأرضي / الأول</td><td class="num">≈ 87.5 / ≈ 75 م²</td></tr>
+      <tr><td><strong>المبني الإجمالي الكلي</strong></td><td class="num"><strong>≈ 162 م²</strong> (+ ≈ 11 م² إن سُمح ببيت درج على السطح)</td></tr>
+      <tr><td>الصافي المسقوف الكلي</td><td class="num">≈ 137 م²، منها مرآب 17.6 ودرج 13.6</td></tr>
+      <tr><td>الصافي السكني دون مرآب ودرج</td><td class="num">≈ 106 م²</td></tr>
+      <tr><td>خارجي</td><td class="num">فناء 12.5 + شرفة 12.7 + سطح ≈ 60 م²</td></tr>
+      <tr><td>المجال المقترح لكل طابق</td><td>الأرضي 85 إلى 88 م²، والأول 72 إلى 78 م². فناء أصغر من نحو 3 × 3.5 م يُفقد الغرف الخلفية ضوءها.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>البديل (ب): أرضي + طابقان</h3>
+  <p>فقط إن سمح التنظيم وكان هو المقصود. الهيكل نفسه، وتتغير الاستعمالات:</p>
+  <ul>
+    <li><strong>الأول:</strong> صالون مغربي فوق المرآب، وصالون ثانٍ مكان غرفة الأطفال، وجناح الأبوين مع الشرفة، والحمام 2.</li>
+    <li><strong>الثاني:</strong> غرفتا أطفال، ومكتب، وحمام 3 على العمود نفسه، وسطح مكشوف على الشارع فوق الصالون لتخفيف الواجهة.</li>
+    <li><strong>الكلفة:</strong> 4 غرف نوم، و3 حمامات، ونحو 237 م² مبنية. يخرج عن البرنامج والميزانية الاقتصادية، ويصير عمق بئر الفناء نحو 10 م، فيقل ضوء الأرضي.</li>
+  </ul>
+
+  <h3>اختبارات الاستعمال</h3>
+  <ul>
+    <li><strong>السيارة:</strong> مرآب صافيه 3.20 × 5.50 يترك 0.65 إلى 0.75 م على جانبي سيارة عرضها 1.8 م، ونحو 0.9 م خلفها للدراجات والرفوف. المناورة في الشارع لم تُختبر لأن عرضه غير معروف.</li>
+    <li><strong>الأبواب:</strong> باب الوالدة 0.90 ينفتح إلى الداخل بعيدًا عن السرير. باب الحمام 1 منزلق حتى لا تتصادم الأبواب في ممر عرضه 1.20.</li>
+    <li><strong>غرفة الوالدة:</strong> سرير 1.40 × 1.90 وخزانة 1.40، ويبقى ممر 1.35 م يناسب العكاز أو المشّاية. الكرسي المتحرك يحتاج دائرة 1.50 م، وتُراجع إن كانت حاجة متوقعة.</li>
+    <li><strong>الأبوان:</strong> سرير 1.60 × 2.00 بخلوص 0.65 على كل جانب، وخزانة 2.00 م.</li>
+    <li><strong>الصالون:</strong> مقاعد مغربية بعمق 0.75 على الجدارين الطويلين، وممر وسطي 1.70، لـ10 إلى 12 جالسًا.</li>
+    <li><strong>الدرج:</strong> عرض 1.00، وارتفاع القائمة 16.7 سم، وعمق النائمة 27 سم. الحد الأدنى النظامي يُتحقق منه.</li>
+  </ul>
+</section>
+
+<section id="strategy">
+  <h2><span class="n">4</span>الحركة والخصوصية والضوء والشبكات</h2>
+  <ul>
+    <li><strong>الدخول:</strong> باب للمشاة وباب للمرآب على الواجهة الجنوبية. عند الدخول يواجه الزائر جدار الحمام ثم ينعطف، على طريقة السقيفة المنكسرة.</li>
+    <li><strong>ثلاثة مسارات من نقطة واحدة:</strong> الضيوف إلى الدرج ثم البهو ثم الصالون. العائلة إلى الممر ثم المعيشة. الوالدة إلى بابها على بعد 3 م دون أي درجة. مجموع الممرات نحو 8 م² في الطابقين.</li>
+    <li><strong>الخصوصية:</strong> ستائر خشبية منزلقة على نوافذ الشارع، وغرفة الأبوين في الخلف بعيدًا عن الصالون، ونافذة الصالون على الفناء عالية حتى لا تقابل نافذة الأبوين، وجدران الشرفة بارتفاع نحو 1.80 م نحو الجيران.</li>
+    <li><strong>الضوء:</strong> الفتحات الجنوبية معتدلة (1.4 إلى 2.0 م عرضًا) داخل جدار سميك يظللها صيفًا ويدخل شمس الشتاء. الفناء بعرض 3.2 م وارتفاع نحو 7 م: الشمس المباشرة تصل أرضيته صيفًا قرب الظهر فقط، وفي الشتاء يبقى ضوءه منعكسًا، لذلك جدرانه بيضاء. المعيشة على نحو 6 م من زجاج الفناء، وهذا حد الضوء المقبول.</li>
+    <li><strong>التهوية:</strong> عابرة من الجنوب إلى الشمال، ومدخنة حرارية عبر الفناء. الحمامات الداخلية بقنوات إلى السطح، وللمطبخ قناة شفط مستقلة.</li>
+    <li><strong>الشبكات:</strong> المطبخ والغسيل والحمامان على عمود صحي واحد، فتقل الأنابيب ونقاط النزول. تصريف الفناء والشرفة والسطح بأنابيب داخلية. السخان الشمسي والخزان فوق العمود نفسه.</li>
+    <li><strong>الإنشاء (مبدئي):</strong> هيكل خرساني مسلح وحشو بالطوب المجوف، وأعمدة على خطوط الجدران، وجسر فوق الفتحة بين المطبخ والمعيشة. المجازات والمقاطع يحددها مهندس الإنشاءات.</li>
+  </ul>
+</section>
+
+<section id="facade">
+  <h2><span class="n">5</span>الواجهة والمواد</h2>
+  <p>كتلة بيضاء عرضها 10 م وارتفاعها نحو 7.1 م، بلا بروزات ولا شرفات على الشارع. شريط عمودي من الحجر الرملي على كامل الارتفاع يضم باب الدخول ونافذة المكتب، وهو علامة المدخل الوحيدة. الفتحات مرتبة على ثلاثة محاور ثابتة: المرآب تحت الصالون، والمدخل تحت المكتب، ونافذة الوالدة تحت نافذة الأطفال. بيت الدرج، إن سُمح به، متراجع 3.70 م عن الواجهة.</p>
+  <figure class="elev">{{EL}}<figcaption>الواجهة الجنوبية، تصوّرية. المناسيب افتراضية.</figcaption></figure>
+  <div class="swatches">
+    <div class="sw"><div class="chip lime"></div><div class="t"><b>أبيض جيري</b><p>لياسة الواجهة والفناء والشرفة والداخل. يعكس الضوء في الفناء.</p></div></div>
+    <div class="sw"><div class="chip stone"></div><div class="t"><b>حجر رملي</b><p>القاعدة 0.60 م، وشريط المدخل، والعتبات، وحافة السترة. أرضيات داخلية بلون الرمل.</p></div></div>
+    <div class="sw"><div class="chip wood"></div><div class="t"><b>خشب طبيعي</b><p>باب المرآب بشرائح، وباب الدخول، والستائر المنزلقة، وواجهات المطبخ، والعريشة.</p></div></div>
+    <div class="sw"><div class="chip bejmat"></div><div class="t"><b>بجمات</b><p>طين محروق لأرضية الفناء والشرفة، اقتصادي ومانع للانزلاق.</p></div></div>
+  </div>
+  <p>الإطارات والدرابزين من معدن برونزي داكن رفيع كلون مساعد. الزجاج مزدوج على الواجهة إن سمحت الميزانية، لتخفيف الضجيج.</p>
+</section>
+
+<section id="visuals">
+  <h2><span class="n">6</span>اللقطات المعمارية</h2>
+  <p>هذا الوصف الثابت يُلصق في بداية كل طلب توليد صورة، حتى يبقى المبنى نفسه في كل اللقطات:</p>
+  <pre class="prompt" id="dna">Contemporary Mediterranean two-storey townhouse in Tangier, Morocco, on a 10 m wide infill plot between neighbouring buildings; single street façade facing south. Flat roof, white lime-render façade about 7 m high with parapet and thin sandstone coping; a full-height vertical sandstone band, left of centre, framing a solid natural-wood entrance door on the ground floor and a narrow window with vertical timber slats directly above it; wooden horizontal-slat garage door on the far left, with a wide first-floor window above it that has a half-closed sliding wooden slat shutter; on the right, one window per floor on the same axis, each with a sliding wooden slat shutter and sandstone sill; 60 cm sandstone plinth; slim dark-bronze frames; no balconies on the street, no large glazing. Rear: a small open-air courtyard (3.2 × 3.9 m) with white walls, terracotta bejmat floor, one potted lemon tree and jasmine.</pre>
+  <div class="copyrow"><button type="button" id="copy">نسخ الوصف</button></div>
+
+  <h3>ست لقطات</h3>
+  <p>تصوير معماري طبيعي، عدسة 28 إلى 35 مم مكافئة، والعين على ارتفاع 1.6 م، دون نصوص أو أبعاد على الصور.</p>
+  <ol class="shots">
+    <li><b>الواجهة من الرصيف المقابل</b><p>صباح شتوي مشمس، والشمس منخفضة من الجنوب الشرقي. بيوت الجيران ملاصقة بارتفاعات متقاربة، وشارع سكني طنجاوي. انحراف 15 درجة، والخطوط العمودية مستقيمة.</p></li>
+    <li><b>المدخل من الداخل</b><p>من العتبة: جدار أبيض أمامك عليه مقعد حجري ومرآة، والممر على اليمين، وضوء الفناء في العمق.</p></li>
+    <li><b>المطبخ والطعام والمعيشة</b><p>من ركن المعيشة نحو الغرب: مطبخ L بواجهات خشبية على اليمين، وطاولة لستة في الوسط، وباب زجاجي على الفناء الأبيض في العمق.</p></li>
+    <li><b>الفناء</b><p>من باب المطبخ نحو الأعلى: جدران بيضاء بطابقين، ونافذة الأبوين بدرابزين رفيع، ونافذة الصالون العالية، وأرضية بجمات، وشجرة ليمون، وياسمين. الظهيرة، والظل يغطي معظم الأرضية.</p></li>
+    <li><b>صالون الضيوف</b><p>من الباب نحو نافذة الشارع: مقاعد مغربية بيج على الجدارين الطويلين، وطاولتان خشبيتان مستديرتان، وضوء الجنوب يرسم خطوط الشرائح على الأرضية.</p></li>
+    <li><b>شرفة الأبوين</b><p>بعد الظهر: جدران بيضاء بارتفاع 1.8 م، وعريشة خشبية تلقي ظلًا مخططًا، وكرسيان وطاولة صغيرة. لا إطلالة على نوافذ الجيران.</p></li>
+  </ol>
+  <div class="note"><p><strong>يُمنع في التوليد:</strong> زجاج من الأرض إلى السقف على الشارع، وشرفات بارزة على الواجهة، وكتل معلقة، وإضاءة مسائية درامية، وتغيير مواضع الفتحات أو المدخل بين اللقطات، ومواد خارج العائلات الأربع، وأي نص أو أبعاد على الصور.</p></div>
+</section>
+
+<section id="site">
+  <h2><span class="n">7</span>ما يجب التحقق منه ميدانيًا</h2>
+  <p>قبل تحويل الفكرة إلى مخطط تنفيذي:</p>
+  <ul class="checks">
+    <li><span><strong>التنظيم العمراني:</strong> تصميم التهيئة ودفتر تحملات التجزئة. الارتفاع وعدد الطوابق، ونسبة التغطية، والفناء الإلزامي، وبيت الدرج على السطح، وشروط الواجهة.</span></li>
+    <li><span><strong>رفع طبوغرافي:</strong> أبعاد القطعة وزواياها الحقيقية، وميل الشارع ومنسوب الرصيف، وعرض الشارع لمناورة السيارة.</span></li>
+    <li><span><strong>الجيران:</strong> ارتفاع مبانيهم، وحالة جدرانهم وأساساتهم، ونوافذهم أو أفنيتهم على حدودنا، وملكية الجدران.</span></li>
+    <li><span><strong>التربة:</strong> دراسة جيوتقنية قبل الأساسات، والحذر عند الحفر بجوار أساسات الجيران.</span></li>
+    <li><span><strong>الزلازل:</strong> التصميم وفق ضابط البناء المضاد للزلازل RPS 2000 بمراجعته المحينة، بواسطة مهندس إنشاءات معتمد.</span></li>
+    <li><span><strong>الحرارة:</strong> مطابقة الضابط الحراري للبناء في المغرب (RTCM) لعزل السطح والجدران والنوافذ.</span></li>
+    <li><span><strong>الشبكات:</strong> نقاط ربط الماء والكهرباء والتطهير وأعماقها، ومنحدرات التصريف للفناء والشرفة.</span></li>
+    <li><span><strong>الوالدة:</strong> هل تحتاج كرسيًا متحركًا؟ عندها تكبر الغرفة والحمام وتُضبط العتبات.</span></li>
+    <li><span><strong>الأسرة:</strong> عدد الأطفال وأعمارهم، وعدد الصالونات المطلوب فعلًا.</span></li>
+  </ul>
+</section>
+
+<footer>مفهوم معماري تصوّري. المخططات والواجهة ليست ملفات CAD أو BIM ولا تصلح للتنفيذ قبل الرفع الميداني والدراسات التقنية.</footer>
+</div>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this, t=document.getElementById('dna').textContent;
+  function done(){b.textContent='تم النسخ';setTimeout(function(){b.textContent='نسخ الوصف'},1600)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('dna'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='الوصف محدد، انسخه يدويًا'}
+  try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+});
+</script>
