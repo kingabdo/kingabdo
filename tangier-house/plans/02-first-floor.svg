@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="850" viewBox="0 0 780 850">
+<defs>
+<pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<line x1="0" y1="0" x2="0" y2="10" stroke="#c9b98f" stroke-width="1.2"/></pattern>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+<path d="M0,0 L10,5 L0,10 z" fill="#2b2b2a"/></marker>
+</defs>
+<rect width="780" height="850" fill="#ffffff"/>
+<text x="390.0" y="34" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="20" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">الطابق الأول — مخطط تصوّري</text>
+<text x="390.0" y="58" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="12" fill="#77736b" text-anchor="middle" direction="rtl">مخطط تصوّري — ليس ملف CAD/BIM — الأبعاد صافية داخلية تقريبية</text>
+<rect x="90.0" y="90.0" width="600.0" height="600.0" fill="#4a4a48" />
+<rect x="102.0" y="345.0" width="192.0" height="330.0" fill="#fbf8f2" />
+<text x="198.0" y="502.8" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">صالون الضيوف</text>
+<text x="198.0" y="525.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">3.20×5.50 م ≈ 17.6 م²</text>
+<rect x="102.0" y="102.0" width="192.0" height="234.0" fill="#e9dfc8" />
+<rect x="102.0" y="102.0" width="192.0" height="234.0" fill="url(#hatch)" />
+<text x="198.0" y="211.8" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">فراغ الفناء</text>
+<text x="198.0" y="234.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">مفتوح للسماء</text>
+<rect x="303.0" y="570.0" width="174.0" height="105.0" fill="#fbf8f2" />
+<text x="390.0" y="615.3" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">مكتب</text>
+<text x="390.0" y="637.5" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">2.90×1.75 م ≈ 5.1 م²</text>
+<rect x="405.0" y="411.0" width="72.0" height="153.0" fill="#fbf8f2" />
+<rect x="303.0" y="342.0" width="174.0" height="69.0" fill="#fbf8f2" />
+<rect x="303.0" y="417.0" width="96.0" height="147.0" fill="#e8f0f3" />
+<text x="351.0" y="483.3" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">حمّام 2</text>
+<text x="351.0" y="505.5" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">1.60×2.45 ≈ 3.9 م²</text>
+<rect x="483.0" y="474.0" width="195.0" height="201.0" fill="#fbf8f2" />
+<text x="580.5" y="567.3" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">غرفة الأطفال</text>
+<text x="580.5" y="589.5" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">3.25×3.35 م ≈ 10.9 م²</text>
+<rect x="303.0" y="102.0" width="174.0" height="234.0" fill="#fbf8f2" />
+<text x="390.0" y="211.8" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">غرفة الأبوين</text>
+<text x="390.0" y="234.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">2.90×3.90 م ≈ 11.3 م²</text>
+<rect x="483.0" y="102.0" width="195.0" height="234.0" fill="#e9dfc8" />
+<rect x="483.0" y="102.0" width="195.0" height="234.0" fill="url(#hatch)" />
+<text x="580.5" y="211.8" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">شرفة الأبوين</text>
+<text x="580.5" y="234.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">3.25×3.90 ≈ 12.7 م² — مكشوفة</text>
+<rect x="138.0" y="675.0" width="120.0" height="15.0" fill="#ffffff" />
+<line x1="138.0" y1="682.5" x2="258.0" y2="682.5" stroke="#5b8fa8" stroke-width="2.5"/>
+<rect x="321.0" y="675.0" width="66.0" height="15.0" fill="#ffffff" />
+<line x1="321.0" y1="682.5" x2="387.0" y2="682.5" stroke="#5b8fa8" stroke-width="2.5"/>
+<rect x="540.0" y="675.0" width="84.0" height="15.0" fill="#ffffff" />
+<line x1="540.0" y1="682.5" x2="624.0" y2="682.5" stroke="#5b8fa8" stroke-width="2.5"/>
+<rect x="138.0" y="336.0" width="120.0" height="9.0" fill="#ffffff" />
+<line x1="138.0" y1="340.5" x2="258.0" y2="340.5" stroke="#5b8fa8" stroke-width="2.5"/>
+<rect x="294.0" y="354.0" width="9.0" height="51.0" fill="#fbf8f2" />
+<rect x="312.0" y="411.0" width="48.0" height="6.0" fill="#fbf8f2" />
+<rect x="414.0" y="564.0" width="48.0" height="6.0" fill="#fbf8f2" />
+<rect x="477.0" y="510.0" width="6.0" height="48.0" fill="#fbf8f2" />
+<rect x="477.0" y="342.0" width="6.0" height="126.0" fill="#fbf8f2" />
+<rect x="408.0" y="336.0" width="54.0" height="6.0" fill="#fbf8f2" />
+<rect x="294.0" y="174.0" width="9.0" height="96.0" fill="#ffffff" />
+<line x1="298.5" y1="270.0" x2="298.5" y2="174.0" stroke="#5b8fa8" stroke-width="2.5"/>
+<rect x="477.0" y="270.0" width="6.0" height="48.0" fill="#fbf8f2" />
+<rect x="483.0" y="342.0" width="195.0" height="126.0" fill="#f1ece2" />
+<line x1="483.0" y1="468.0" x2="483.0" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="483.0" y1="402.0" x2="483.0" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="499.2" y1="468.0" x2="499.2" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="499.2" y1="402.0" x2="499.2" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="515.4" y1="468.0" x2="515.4" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="515.4" y1="402.0" x2="515.4" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="531.6" y1="468.0" x2="531.6" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="531.6" y1="402.0" x2="531.6" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="547.8" y1="468.0" x2="547.8" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="547.8" y1="402.0" x2="547.8" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="564.0" y1="468.0" x2="564.0" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="564.0" y1="402.0" x2="564.0" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="580.2" y1="468.0" x2="580.2" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="580.2" y1="402.0" x2="580.2" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="596.4" y1="468.0" x2="596.4" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="596.4" y1="402.0" x2="596.4" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<line x1="612.6" y1="468.0" x2="612.6" y2="408.0" stroke="#77736b" stroke-width="1"/>
+<line x1="612.6" y1="402.0" x2="612.6" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<rect x="483.0" y="402.0" width="129.6" height="6.0" fill="#4a4a48" />
+<line x1="612.6" y1="468.0" x2="612.6" y2="342.0" stroke="#77736b" stroke-width="1"/>
+<path d="M492.0,438.0 L600.0,438.0" stroke="#2b2b2a" stroke-width="1.4" marker-end="url(#arrow)" fill="none"/>
+<path d="M600.0,372.0 L492.0,372.0" stroke="#2b2b2a" stroke-width="1.4" marker-end="url(#arrow)" fill="none"/>
+<text x="645.0" y="399.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="10" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">بسطة</text>
+<text x="546.0" y="459.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="9.5" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">صعود نحو السطح</text>
+<text x="378.0" y="381.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2b2b2a" text-anchor="middle" direction="rtl">بهو</text>
+<text x="441.0" y="492.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="11" font-weight="normal" fill="#77736b" text-anchor="middle" direction="rtl">ممر</text>
+<line x1="90" y1="728" x2="690" y2="728" stroke="#2b2b2a" stroke-width="1"/>
+<line x1="90" y1="722" x2="90" y2="734" stroke="#2b2b2a"/>
+<line x1="690" y1="722" x2="690" y2="734" stroke="#2b2b2a"/>
+<text x="390" y="723" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2b2b2a">10.00 م</text>
+<line x1="52" y1="690" x2="52" y2="90" stroke="#2b2b2a" stroke-width="1"/>
+<line x1="46" y1="690" x2="58" y2="690" stroke="#2b2b2a"/>
+<line x1="46" y1="90" x2="58" y2="90" stroke="#2b2b2a"/>
+<text x="44" y="390" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2b2b2a" transform="rotate(-90 44 390)">10.00 م</text>
+<text x="390" y="754" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#2b2b2a" direction="rtl">الشارع — الواجهة الوحيدة (جنوب)</text>
+<text x="390" y="78" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#77736b" direction="rtl">جار خلفي (شمال) — جدار ملاصق</text>
+<text x="20" y="240.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#77736b" direction="rtl" transform="rotate(-90 20 240.0)">جار يسار (غرب)</text>
+<text x="720" y="240.0" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="11" text-anchor="middle" fill="#77736b" direction="rtl" transform="rotate(90 720 240.0)">جار يمين (شرق)</text>
+<path d="M730,130 L730,100" stroke="#2b2b2a" stroke-width="1.6" marker-end="url(#arrow)"/>
+<text x="730" y="146" font-family="Noto Naskh Arabic, Amiri, Tahoma, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2b2b2a">N</text>
+</svg>
