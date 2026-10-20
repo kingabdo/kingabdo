@@ -113,7 +113,7 @@ function renderUSALesson(resource){
   }
   $("#lessonCrumb").textContent="الثالثة إعدادي · الجغرافيا";
   $("#lessonContent").innerHTML=`
-    <section class="usa-hero"><div class="usa-hero-copy"><div class="usa-meta"><span>الثالثة إعدادي</span><span>الجغرافيا</span><span>الدورة الثانية</span></div><p class="usa-lesson-number">الدرس 07</p><h1>الولايات المتحدة<br>الأمريكية <span>قوة عالمية</span></h1><p class="usa-subtitle">النصوص الأصلية، وقراءة جديدة للوثائق.</p><div class="usa-hero-actions"><a class="button light-button" href="#usa-intro">ابدأ الدرس ${icon("arrow")}</a><button class="presentation-toggle" id="presentationToggle" aria-pressed="false">${icon("grid")} وضع العرض</button></div><div class="usa-hero-meta"><span>${icon("clock")} حصتان</span><span>${icon("document")} 58 شريحة مرجعية</span><span>${icon("book")} 3 أنشطة رئيسية</span></div></div><figure class="usa-hero-photo"><img src="assets/new-york.jpg" alt="أفق نيويورك عند الغروب" width="900" height="600" fetchpriority="high"><figcaption><span>NEW YORK, UNITED STATES</span><strong>قراءة في القوة الاقتصادية.</strong></figcaption></figure></section>
+    <section class="usa-hero"><div class="usa-hero-copy"><div class="usa-meta"><span>الثالثة إعدادي</span><span>الجغرافيا</span><span>الدورة الثانية</span></div><p class="usa-lesson-number">الدرس 07</p><h1>الولايات المتحدة<br>الأمريكية <span>قوة عالمية</span></h1><p class="usa-subtitle">النصوص الأصلية، وقراءة جديدة للوثائق.</p><div class="usa-hero-actions"><a class="button light-button" href="#usa-intro">ابدأ الدرس ${icon("arrow")}</a><button class="presentation-toggle" id="presentationToggle" aria-pressed="false">${icon("grid")} اعرض الدرس كشرائح</button></div><div class="usa-hero-meta"><span>${icon("clock")} حصتان</span><span>${icon("document")} 58 شريحة مرجعية</span><span>${icon("book")} 3 أنشطة رئيسية</span></div></div><figure class="usa-hero-photo"><img src="assets/new-york.jpg" alt="أفق نيويورك عند الغروب" width="900" height="600" fetchpriority="high"><figcaption><span>NEW YORK, UNITED STATES</span><strong>قراءة في القوة الاقتصادية.</strong></figcaption></figure></section>
     <div class="source-integrity">${icon("check")}<p><strong>أُعيد تصميم طريقة العرض، مع الحفاظ على النصوص.</strong> نُقلت النصوص والجداول دون إعادة صياغة. تظهر ملاحظات التدقيق منفصلة بلون مميز؛ الأرقام مؤرخة بحسب الملف وليست تحديثًا لعام 2026.</p><a href="#sourcePolicy">تفاصيل المصدر ↓</a></div>
     <nav class="course-tabs" aria-label="محاور الدرس" role="tablist">${stages.map((s,i)=>`<button role="tab" id="tab-${s.id}" aria-controls="panel-${s.id}" aria-selected="${i===0}" tabindex="${i===0?0:-1}" data-stage="${s.id}"><span>${s.number}</span>${s.label}</button>`).join("")}</nav>
     <div class="course-reading-progress" aria-hidden="true"><i id="courseProgress"></i></div>
@@ -138,7 +138,24 @@ function renderUSALesson(resource){
   addEventListener("popstate",()=>activate(location.hash.startsWith("#usa-")?location.hash.slice(5):"intro"));
   function updateProgress(){const panel=$(".course-panel:not([hidden])");if(!panel)return;const rect=panel.getBoundingClientRect(),distance=Math.max(1,panel.offsetHeight-innerHeight);$("#courseProgress").style.width=`${Math.max(0,Math.min(100,-rect.top/distance*100))}%`;}
   addEventListener("scroll",updateProgress,{passive:true});
-  $("#presentationToggle").addEventListener("click",()=>{const on=document.body.classList.toggle("presentation-mode");$("#presentationToggle").setAttribute("aria-pressed",String(on));toast(on?"وضع العرض مفعّل: نص أكبر ومساحة أوسع للوثائق.":"العودة إلى وضع القراءة.");});
+  const deck=(()=>{
+    const S=[],themes=["intro","act1","act2","act3","wrap"];
+    S.push({kind:"cover",theme:"intro",title:"الغلاف",html:`<div class="pz-cover" style="background-image:url('assets/new-york.jpg')"><p class="pz-eyebrow"><span>الجغرافيا</span><span>الثالثة إعدادي</span><span>الدورة الثانية</span></p><h1>الولايات المتحدة الأمريكية<span>قوة عالمية</span></h1><p class="pz-cover-foot"><span>58 شريحة مرجعية</span><span>3 أنشطة رئيسية</span><span>أطلس المعرفة · تسنيم</span></p></div>`});
+    stages.forEach((st,i)=>{
+      const theme=themes[i]||"base";
+      S.push({kind:"divider",theme,title:st.label,html:`<div class="pz-divider"><span class="pz-big">${i+1}</span><div><p>المحور ${st.number}</p><h2>${esc(st.label)}</h2><ul>${st.sections.map((sec,j)=>`<li><b>${j+1}</b>${esc(sec.label)}</li>`).join("")}</ul></div></div>`});
+      st.sections.forEach(sec=>sec.slides.forEach(n=>{
+        const box=document.createElement("div");box.innerHTML=documentHTML(n,"pz-"+sec.id);
+        const art=box.firstElementChild,h=art.querySelector(".document-heading");
+        const type=h.querySelector(".document-type")?.textContent||"",title=h.querySelector("h3")?.innerHTML||"";
+        const plain=h.querySelector("h3")?.textContent||"";
+        h.remove();
+        S.push({kind:"content",theme,band:`${st.label} · ${sec.label}`,title:`${sec.label}: ${plain}`,html:`<div class="pz-head"><span class="pz-no"><small>شريحة</small>${n}</span><div class="pz-head-text"><span class="pz-kind">${esc(type)}</span><h2>${title}</h2></div></div><div class="pz-zoom pz-usa" data-max="1.7">${art.innerHTML}</div>`});
+      }));
+    });
+    return S;
+  })();
+  $("#presentationToggle").addEventListener("click",()=>{const panel=$(".course-panel:not([hidden])"),i=stages.findIndex(st=>`panel-${st.id}`===panel?.id);let start=0;if(i>0)start=deck.findIndex(sl=>sl.kind==="divider"&&sl.title===stages[i].label);Presenter.open({title:"الولايات المتحدة الأمريكية قوة عالمية",slides:deck,start:Math.max(0,start)});});
   const dialog=$("#evidenceDialog");let opener=null;
   $$("[data-image]").forEach(b=>b.addEventListener("click",()=>{opener=b;$("#evidenceDialogTitle").textContent=slug(b.dataset.caption);$("#largeEvidence").src=b.dataset.image;$("#largeEvidence").alt=slug(b.dataset.caption);$("#openEvidence").href=b.dataset.image;dialog.showModal();}));
   $("#closeEvidence").addEventListener("click",()=>dialog.close());

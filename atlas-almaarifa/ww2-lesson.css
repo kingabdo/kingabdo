@@ -17,7 +17,7 @@
 .wd-goals ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .wd-goals li{font-size:14px;line-height:1.9;color:#35483e}.wd-goals li b{display:block;font-size:11px;font-weight:500;color:#8a7a52}
 .wd-goal-note{font-size:10px;color:#8c7448;margin-top:12px;line-height:1.8}
-.wd-activity{display:grid;gap:4px;background:var(--green);color:#fff;border-radius:10px;padding:22px 26px;margin-bottom:22px}
+.wd-activity{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:var(--green);color:#fff;border-radius:10px;padding:22px 26px;margin-bottom:22px}.wd-activity>div{display:grid;gap:4px;min-width:0}
 .wd-activity span{font-size:11px;color:#e1cca0}.wd-activity strong{font-weight:500;font-size:20px;line-height:1.7}.wd-activity small{font-size:11px;color:#c8d9cf}
 .wd-doc{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:34px;overflow:hidden}
 .wd-doc-head{display:flex;gap:18px;align-items:flex-start;padding:20px 24px;border-bottom:1px solid var(--line);background:#fcfbf7}
