@@ -13,9 +13,9 @@ function putFields(values) {
   }
 }
 function paperHeader(d,kicker) {
-  return `<header class="paper-header"><div><strong>أطلس المعرفة</strong><span>التاريخ والجغرافيا · وثيقة الأستاذ</span></div><div><span>الموسم الدراسي: <bdi dir="ltr">${esc(d.year || "—")}</bdi></span><span>${esc(d.school || "اسم المؤسسة")}</span></div></header><p class="paper-kicker">${kicker}</p><h2>${esc(d.title || "عنوان الوثيقة")}</h2><div class="paper-info"><div><b>الأستاذ(ة):</b> ${esc(d.teacher || "................................")}</div><div><b>المستوى:</b> ${esc(d.level || "—")}</div>${isFiche?`<div><b>المادة:</b> ${esc(d.subject)}</div><div><b>المدة:</b> ${esc(d.duration)}</div>`:""}</div>`;
+  return `<header class="paper-header"><div><strong>أطلس المعرفة · تسنيم</strong><span>التاريخ والجغرافيا · وثيقة الأستاذ</span></div><div><span>الموسم الدراسي: <bdi dir="ltr">${esc(d.year || "—")}</bdi></span><span>${esc(d.school || "اسم المؤسسة")}</span></div></header><p class="paper-kicker">${kicker}</p><h2>${esc(d.title || "عنوان الوثيقة")}</h2><div class="paper-info"><div><b>الأستاذ(ة):</b> ${esc(d.teacher || "................................")}</div><div><b>المستوى:</b> ${esc(d.level || "—")}</div>${isFiche?`<div><b>المادة:</b> ${esc(d.subject)}</div><div><b>المدة:</b> ${esc(d.duration)}</div>`:""}</div>`;
 }
-const paperFooter = () => `<footer class="paper-footer"><span>أطلس المعرفة · مسودة قابلة للتعديل</span><span>تُراجع من طرف الأستاذ قبل الاعتماد.</span></footer>`;
+const paperFooter = () => `<footer class="paper-footer"><span>أطلس المعرفة · تسنيم · مسودة قابلة للتعديل</span><span>تُراجع من طرف الأستاذ قبل الاعتماد.</span></footer>`;
 function activityFromDOM() {
   activities = $$(".activity-editor").map(row=>({
     title:$('[data-field="title"]',row).value,
