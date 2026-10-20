@@ -101,7 +101,7 @@ try{
   if(saved && saved.fields && typeof saved.fields==="object"){putFields(saved.fields);if(isFiche && Array.isArray(saved.activities) && saved.activities.length){activities=saved.activities.slice(0,20).map(a=>({title:String(a.title||""),minutes:String(a.minutes||"10"),teacher:String(a.teacher||""),learner:String(a.learner||""),assessment:String(a.assessment||"")}));activityEditors();}status("تم استرجاع المسودة المحفوظة على هذا المتصفح");}
 }catch{status("لا تتوفر مسودة قابلة للاسترجاع؛ يمكنك البدء من النموذج.");}
 if(isFiche){
-  const requested=new URLSearchParams(location.search).get("lesson");
+  const requested=routeParam("lesson");
   if(resources.some(r=>r.id===requested)){loadTemplate(requested);status("تم تحميل الدرس من المكتبة · المسودة السابقة لا تُستبدل إلا عند الحفظ");}
   previousTemplate=form.elements.template.value;
 }
